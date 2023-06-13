@@ -1,0 +1,27 @@
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* layer base is another customization option for you in tailwind, 
+you can customize your code here only if you cannot do it through tailwind classes or that it has so many classes */
+@layer base {
+    html {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* this is an example of styling in your css file while still using tailwind css */
+    .section-example {
+        @apply py-16 my-5 bg-purple-300 flex items-center justify-center;
+        /* you can even combine normal css properties here BUT you cannot apply tailwind classes here, only with @apply*/
+        position: relative;
+        font-weight: 600;
+        color: #f7f7f7;
+    }
+}
+
